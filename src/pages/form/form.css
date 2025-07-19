@@ -1,0 +1,231 @@
+* {
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    box-sizing: border-box;
+    font-family: "Inconsolata", monospace;
+    font-optical-sizing: auto;
+    font-style: normal;
+    font-variation-settings:"wdth" 100;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+    background: url('../../assets/background-desktop.png');
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    padding: 0 1rem;   
+}
+
+main .lines {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+}
+
+main .top-desktop {
+    position: absolute;
+    top: 2rem;
+    right: 1rem;
+}
+
+main .bottom-desktop {
+    position: absolute;
+    bottom: 2rem;
+    left: 1rem; 
+    width: 30rem;
+}
+
+header {
+    margin-top: 1.5rem;
+}
+
+caption h1 {
+    font-weight: 800;
+    font-size: 3rem;
+    color: hsl(0, 0%, 100%);
+    margin: 2rem 0 1rem 0;
+}
+
+caption p, label {
+    font-weight: 400;
+    font-size: 1.3rem;
+    color: hsl(0, 0%, 100%);
+    margin-bottom: 0.5rem;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    height: auto;
+    z-index: 10;
+    margin: 2rem 0;
+    position: relative; 
+    width: 100%;
+    max-width: 28rem;
+}
+
+.form-action-1 {
+    display: flex;
+    flex-direction: column;
+    z-index: 10;
+    position: relative;
+}
+
+.form-action-1 .upload-icon {
+    position: absolute;
+    background-color: hsl(245, 19%, 35%);
+    width: 2.5rem;
+    top: 2rem;
+    right: 12rem;
+    margin-top: 0.3rem;
+    padding: 0.3rem;
+}
+
+form .circles {
+    position: absolute;
+    width: 9rem;
+    top: 11rem;
+    right: -9rem;
+}
+
+#upload {
+    width: 100%; 
+    height: 10rem;
+    border-radius: 10px;
+    border-style: dashed;
+    border-color: #c7c4c4ea;
+    outline: none;
+    padding: 10px 7px;
+    background-color: transparent;
+    margin-bottom: 0.3rem;
+    color: #fff; 
+    text-align: center;
+}
+
+#upload::placeholder {
+    text-align: center;
+    color: #9b9999ea;
+}
+
+.form-action-1 p {
+    font-size: 0.8rem;
+    color: #c7c4c4ea;
+}
+
+.details {
+    width: 100%; 
+    height: 3.5rem; 
+    font-size: 1rem;
+    color: #ffffff;
+    border-radius: 10px;
+    padding: 10px 10px;
+    border: 1px solid #c7c4c4ea;
+    outline: none;
+    background-color: transparent;
+}
+
+.details::placeholder {
+    color: #9b9999ea;
+    font-size: 1rem;
+}
+
+.form-action-btn {
+    width: 100%; 
+    height: 3.8rem; 
+    font-size: 1rem;
+    color: #000000;
+    border-radius: 10px;
+    padding: 10px 10px;
+    outline: 1px solid #fff;
+    border: 2px solid #000;
+    background-color: hsl(7, 88%, 67%);
+    text-align: center;
+    cursor: pointer; 
+}
+
+a:link {
+    color: black;
+}
+
+/* =================================================== */
+/*               RESPONSIVE DESIGN            */
+/* =================================================== */
+
+/* --- For Tablets (screens 768px wide or smaller) --- */
+@media (max-width: 768px) {
+    caption h1 {
+        font-size: 2.5rem;
+    }
+
+    main .bottom-desktop {
+        width: 25rem; 
+        left: -1rem;  
+    }
+
+    form .circles {
+        width: 7rem;   
+        right: -5rem;  
+        top: 9rem;      
+    }
+}
+
+/* ============================================================= */
+/* ---  Mobile Query (screens 425px wide or smaller) --- */
+/* ============================================================= */
+@media (max-width: 425px) {
+
+ 
+  main {
+    padding: 0 1.5rem; 
+  }
+
+  caption h1 {
+    font-size: 1.8rem;
+    margin-top: 1rem;
+    text-align: center; 
+  }
+  
+
+  caption p, label {
+    font-size: 1rem;
+   
+  }
+
+
+  #upload {
+    height: 15vh;
+  }
+  .details,
+  .form-action-btn {
+    height: 7vh;
+  }
+
+  /* THIS IS THE SECTION FOR DECORATIVE ELEMENTS */
+
+  /* 1. Make the TOP pattern smaller and position it inside the view */
+  main .top-desktop {
+    width: 50px;  
+    top: 10px;     
+    right: 10px;   
+  }
+
+  /* BOTTOM pattern is repositioned to be visible */
+  main .bottom-desktop {
+    width: 200px;   
+    bottom: -20px; 
+    left: -20px;   
+  }
+  
+  
+  form .circles {
+    width: 80px;   
+    top: 10rem;
+    right: -25px;   
+  }
+}

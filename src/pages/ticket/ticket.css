@@ -1,0 +1,244 @@
+*{
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    box-sizing: border-box;
+    font-family: "Inconsolata", monospace;
+    font-optical-sizing: auto;
+    font-style: normal;
+    font-variation-settings:"wdth" 100;
+    
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+    background: url('../../assets/background-desktop.png');
+    background-size: cover;
+    background-position: center;
+    position: relative;   
+}
+
+main .lines {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    
+}
+
+main .top-desktop {
+    position: absolute;
+    top: 2rem;
+    right: 1rem;
+}
+
+main .bottom-desktop {
+    position: absolute;
+    bottom: 2rem;
+    left: 1rem; 
+    width: 30rem;
+}
+
+
+
+caption h1 {
+    font-weight: 800;
+    font-size: 3rem;
+    color: hsl(0, 0%, 100%);
+    margin: 2rem 0 1rem 0;
+}
+
+caption p {
+    font-weight: 400;
+    font-size: 1.3rem;
+    color: hsl(0, 0%, 100%);
+    margin-bottom: 0.5rem;
+    
+}
+
+caption .name {
+    color: hsl(7, 86%, 67%);
+}
+
+
+.ticket-card {
+    display: flex;
+    flex-direction: column;
+    gap: 4rem;
+    height: auto;
+    width: 40rem;
+    z-index: 20;
+    margin: 5rem 0rem 5rem 0rem;
+    padding: 2rem 1rem;
+    position: relative;
+    background: url('../../assets/pattern-ticket.svg');
+    background-repeat: no-repeat;
+    
+     
+} 
+
+
+.ticket-card .circles {
+    position: absolute;
+    width: 11rem;
+    top: 4rem;
+    right: -4rem;
+    
+}
+
+
+.logo img {
+    width: 20rem;
+    
+}
+
+.logo p {
+    color: hsl(0, 0%, 100%);
+    font-size: 1.5rem;
+    margin-left: 4.5rem;
+    
+}
+
+.card-name-img {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+.card-img img {
+    width: 5rem;
+    border-radius: 10px;
+}
+
+.card-name h3 {
+    font-size: 2rem;
+    color: hsl(0, 0%, 100%);
+    margin-bottom: 1rem;
+}
+
+.card-name p {
+    font-size: 1rem;
+    color: hsl(0, 0%, 100%);
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+/* ========= Tablet View (768px and below) ========= */
+@media screen and (max-width: 768px) {
+  caption h1 {
+    font-size: 2.2rem;
+  }
+
+  caption p {
+    font-size: 1rem;
+  }
+
+  .ticket-card {
+    width: 90%;
+    padding: 1.5rem 1rem;
+    gap: 3rem;
+  }
+
+  .ticket-card .circles {
+    width: 8rem;
+    top: 3rem;
+    right: -3rem;
+  }
+
+  .logo img {
+    width: 15rem;
+  }
+
+  .logo p {
+    font-size: 1.2rem;
+    margin-left: 2rem;
+  }
+
+  .card-name h3 {
+    font-size: 1.5rem;
+  }
+
+  .card-name p {
+    font-size: 0.9rem;
+  }
+
+  .card-img img {
+    width: 4rem;
+  }
+
+  main .bottom-desktop {
+    width: 20rem;
+  }
+}
+
+
+/* MEDIA QUERY FOR 425PX AND BELOW */
+
+@media screen and (max-width: 425px) {
+  caption h1 {
+    font-size: 2.2rem;
+    text-align: center;
+  }
+
+  caption p {
+    font-size: 1rem;
+    text-align: center;
+  }
+
+  .ticket-card {
+    width: 95%;
+    padding: 1.5rem;
+    gap: 2.5rem;
+    margin: 3rem 0;
+    background-size: contain; /* make sure bg fits */
+    background-position: center;
+  }
+
+  .ticket-card .circles {
+    width: 6rem;
+    top: 2rem;
+    right: -2rem;
+  }
+
+  .logo img {
+    width: 14rem;
+  }
+
+  .logo p {
+    font-size: 1.2rem;
+    margin-left: 2rem;
+  }
+
+  .card-name-img {
+    flex-direction: row;
+    gap: 1rem;
+  }
+
+  .card-img img {
+    width: 4.2rem;
+  }
+
+  .card-name h3 {
+    font-size: 1.6rem;
+  }
+
+  .card-name p {
+    font-size: 0.9rem;
+    gap: 0.6rem;
+  }
+
+  main .top-desktop {
+    top: 1rem;
+    right: 0.5rem;
+    width: 7rem;
+  }
+
+  main .bottom-desktop {
+    bottom: 1rem;
+    left: 0.5rem;
+    width: 12rem;
+  }
+}
